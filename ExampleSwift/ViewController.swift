@@ -8,6 +8,7 @@
 import UIKit
 import SwiftMixOC
 import OCMixSwift
+import Topic
 
 class ViewController: UIViewController {
 
@@ -23,6 +24,10 @@ class ViewController: UIViewController {
         let fan = Fan(count: 8)
         let car = Vehicle(name: "car", fan: fan)
         print(car.fan.count)
+        
+        let topic = Topic()
+        let topicDetail = TopicDetail()
+        print(topic, topicDetail)
     }
 
 

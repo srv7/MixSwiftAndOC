@@ -37,6 +37,8 @@
 		3AAA09A4264A82E000AA3AFD /* SwiftMixOC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA08F0264A757000AA3AFD /* SwiftMixOC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AAA09AA264A835300AA3AFD /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA09A9264A835300AA3AFD /* DetailVC.swift */; };
 		3AAA09AE264A851400AA3AFD /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA09AD264A851400AA3AFD /* DetailVC.m */; };
+		3AAA09B1264A869600AA3AFD /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA09B0264A869600AA3AFD /* Topic.m */; };
+		3AAA09B6264A86E400AA3AFD /* TopicDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA09B5264A86E400AA3AFD /* TopicDetail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,12 @@
 		3AAA09AB264A851300AA3AFD /* ExampleSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExampleSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		3AAA09AC264A851400AA3AFD /* DetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
 		3AAA09AD264A851400AA3AFD /* DetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
+		3AAA09AF264A869600AA3AFD /* Topic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Topic.h; sourceTree = "<group>"; };
+		3AAA09B0264A869600AA3AFD /* Topic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
+		3AAA09B3264A86C900AA3AFD /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		3AAA09B4264A86E400AA3AFD /* TopicDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicDetail.h; sourceTree = "<group>"; };
+		3AAA09B5264A86E400AA3AFD /* TopicDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicDetail.m; sourceTree = "<group>"; };
+		3AAA09B7264A870700AA3AFD /* TopicHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicHeaders.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +250,7 @@
 				3AAA092A264A794F00AA3AFD /* ViewController.swift */,
 				3AAA09AC264A851400AA3AFD /* DetailVC.h */,
 				3AAA09AD264A851400AA3AFD /* DetailVC.m */,
+				3AAA09B2264A869F00AA3AFD /* Topic */,
 				3AAA092C264A794F00AA3AFD /* Main.storyboard */,
 				3AAA092F264A795100AA3AFD /* Assets.xcassets */,
 				3AAA0931264A795100AA3AFD /* LaunchScreen.storyboard */,
@@ -268,6 +277,19 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AAA09B2264A869F00AA3AFD /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				3AAA09B4264A86E400AA3AFD /* TopicDetail.h */,
+				3AAA09B5264A86E400AA3AFD /* TopicDetail.m */,
+				3AAA09AF264A869600AA3AFD /* Topic.h */,
+				3AAA09B0264A869600AA3AFD /* Topic.m */,
+				3AAA09B3264A86C900AA3AFD /* module.modulemap */,
+				3AAA09B7264A870700AA3AFD /* TopicHeaders.h */,
+			);
+			path = Topic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,7 +507,9 @@
 				3AAA092B264A794F00AA3AFD /* ViewController.swift in Sources */,
 				3AAA09AE264A851400AA3AFD /* DetailVC.m in Sources */,
 				3AAA0927264A794F00AA3AFD /* AppDelegate.swift in Sources */,
+				3AAA09B6264A86E400AA3AFD /* TopicDetail.m in Sources */,
 				3AAA0929264A794F00AA3AFD /* SceneDelegate.swift in Sources */,
+				3AAA09B1264A869600AA3AFD /* Topic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +823,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.che300.ExampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/ExampleSwift/Topic";
 				SWIFT_OBJC_BRIDGING_HEADER = "ExampleSwift/ExampleSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -821,6 +846,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.che300.ExampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/ExampleSwift/Topic";
 				SWIFT_OBJC_BRIDGING_HEADER = "ExampleSwift/ExampleSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
